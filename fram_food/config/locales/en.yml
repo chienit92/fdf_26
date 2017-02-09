@@ -20,4 +20,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  base_title: "Welcome to Framfood"
+  home: "Home"
+  login: "Login"
+  welcome: "Welcome to Framgia"
+  short_des: "This is homepage of Framfood"
+  logo: "Logo"
+  contact: "Contact"
+  about: "About"
+  source_des: "Website by"
+  framgia: "Framgia"
+  dates:
+    formats:
+      date_month_year: "%d-%m-%y"
+  main_food: "food.jpg"
