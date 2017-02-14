@@ -100,11 +100,6 @@ en:
   admins:
     categories:
       add_success: "Insert sucessfully"
-      not_found: "Category not found"
-      del_success: "Delete succesfully"
-      update_success: "Update successfully"
-      update_fail: "Update fail,try again"
-
       index:
         add: "Add"
         category_add: "Adding Category"
@@ -133,3 +128,4 @@ en:
         sel: "Select One"
         food: "Food"
         drink: "Drink"
+
