@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, except: [:new, :create]
+  before_action :find_user, except:[:new, :create]
 
   def show
   end
@@ -23,11 +23,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update_attributes user_params
-      flash.now[:success] = t "controllers.users.profile_update"
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile update"
       redirect_to @user
     else
-      flash.now[:danger] = t "controllers.users.error_update"
       render :edit
     end
   end

@@ -2,37 +2,3 @@
 <h1>
   <%= @user.name %>
 </h1>
-<div class="container">
-  <ul class="nav nav-pills">
-    <li>
-      <a data-toggle="pill" href="#profile">
-        <span class="glyphicon glyphicon-th-list"></span>
-        <%= t ".profile" %>
-      </a>
-    </li>
-    <li>
-      <a data-toggle="pill" href="#menu2">
-        <span class="glyphicon glyphicon-list-alt"></span>
-        <%= t ".summary" %>
-      </a>
-    </li>
-    <li>
-      <a data-toggle="pill" href="#menu3">
-        <span class="glyphicon glyphicon-pencil"></span>
-        <%= t ".suggest" %>
-      </a>
-    </li>
-  </ul>
-
-  <div class="tab-content">
-    <div id="profile" class="tab-pane fade">
-      <div class="col-md-6 col-md-offset-3">
-        <%= render "form" %>
-      </div>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-    </div>
-    <div id="menu3" class="tab-pane fade">
-    </div>
-  </div>
-</div>

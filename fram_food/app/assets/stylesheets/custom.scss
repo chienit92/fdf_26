@@ -155,17 +155,3 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
-/* Login */
-.modal-header, h4, .close {
-  padding:35px 50px;
-  background-color: #5cb85c;
-  color:white !important;
-  text-align: center;
-  font-size: 30px;
-}
-.modal-body{
-  padding:40px 50px;
-}
-.modal-footer {
-  background-color: #f9f9f9;
-}

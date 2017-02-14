@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for @user do |f| %>
-      <%= render "shared/error_messages", target: @user %>
+      <%= render "shared/error_messages" %>
 
       <%= f.label :name %>
       <%= f.text_field :name, class: "form-control" %>
@@ -18,7 +18,7 @@
       <%= f.password_field :password_confirmation, class: "form-control" %>
 
       <%= f.label :address %>
-      <%= f.text_field :address, class: "form-control" %>
+      <%= f.text_field :addres, class: "form-control" %>
 
       <%= f.label :phone %>
       <%= f.text_field :phone,class: "form-control" %>

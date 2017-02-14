@@ -68,31 +68,20 @@ en:
   sessions:
     new:
       login: "Login"
-      remember: "Remember me"
+      remember: "Remember me on this computer"
       signup_now: "Sign up now!"
-      new_user: "New user ?"
-      forgot: "Forgot ?"
-      forgot_password: "Forgot password !"
+      new_user: "New user?"
 
   users:
     new:
       signup: "Sign up"
       create: "Create my account"
       confir: "Confirmation"
-    form:
-      confir: "Confirmation"
-      save: "Save changes"
-    show:
-      profile: "Profile"
-      summary: "My Summary"
-      suggest: "Suggest Admin"
 
   controllers:
     users:
       welcome: "Welcome to the Sample App!"
       not_found: "Don't have user"
-      profile_update: "Profile update"
-      error_update: "Update Fail"
 
     sessions:
       invalid: "Invalid email/password combination"
@@ -100,11 +89,6 @@ en:
   admins:
     categories:
       add_success: "Insert sucessfully"
-      not_found: "Category not found"
-      del_success: "Delete succesfully"
-      update_success: "Update successfully"
-      update_fail: "Update fail,try again"
-
       index:
         add: "Add"
         category_add: "Adding Category"
@@ -113,11 +97,3 @@ en:
         new_cat: "New Category"
         add_new_title: "Adding a new category"
         create_cat: "Create Category"
-
-      category:
-        confirm: "Are you sure?"
-        update: "Update"
-        delete: "Delete"
-        edit: "Edit"
-        edit_cat: "Edit Category"
-        close: "Close"
