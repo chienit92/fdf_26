@@ -12,6 +12,13 @@ $gray-medium-light: #eaeaea;
 }
 /* universal */
 
+.cover-container {
+    height: 180px;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
 .container{
   width: 100%;
   height: auto;
@@ -26,30 +33,25 @@ body {
   height: auto;
 }
 #section11 {
-  padding-top: 10px;
-  height: 500px;
+  height: 300px;
   color: #00e600;
   background-color: #fff;
 }
 #section12 {
-  padding-top: 10px;
-  height: 500px;
+  height: 300px;
   color: #673ab7;
   background-color: #fff;
 }
 #section2{
-  padding-top: 10px;
-  height: 500px;
+  height: 300px;
   color: #ff0000;
   background-color: #fff;
   }
-#section3 {
-  padding-top: 10px;
-  height: 500px;
-  color: #ff9900;
-  background-color: #fff;
+.card{
+  dislay: inline-block;
+  height: 200px;
+  overflow-x: scroll;
 }
-
 section {
   overflow: auto;
 }
@@ -77,6 +79,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: left;
+  color: blue;
 }
 
 h2 {
@@ -214,3 +217,49 @@ input {
       width: 50%;
       margin: auto;
   }
+@media (max-width: 767px) {
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+      left: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+      left: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+  }
+
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+      left: 0;
+      -webkit-transform: translate3d(50%, 0, 0);
+      transform: translate3d(50%, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+      left: 0;
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+  }
+}
+@media (min-width: 992px ) {
+
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+      left: 0;
+      -webkit-transform: translate3d(16.7%, 0, 0);
+      transform: translate3d(16.7%, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+      left: 0;
+      -webkit-transform: translate3d(-16.7%, 0, 0);
+      transform: translate3d(-16.7%, 0, 0);
+  }
+
+}
+

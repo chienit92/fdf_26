@@ -7,6 +7,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :description
       t.string :image
       t.string :classify
+      t.string :description
       t.references :category,foreign_key: true
 
       t.timestamps

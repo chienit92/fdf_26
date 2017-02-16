@@ -1,10 +1,17 @@
 <div class="block-comment">
-  <div class="user-comment">
-    <div class="user">
+  <div class="comment">
+    <span class="user">
       <%= comment.user.name %>
-    </div>
-    <div class="content">
+    </span>
+    <span class="content">
       <%= comment.content %>
-    </div>
+    </span>
+    <span class="timestamp">
+    Posted <%= time_ago_in_words(comment.created_at) %>
+    <% if logged_in? && comment.user.current_user?(current_user) %>
+      <%= link_to "delete",
+        product_comment_path(@product, comment), remote: true, method: :delete %>
+    <% end %>
+  </span>
   </div>
 </div>

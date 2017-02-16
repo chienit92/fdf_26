@@ -1,6 +1,26 @@
 <div id="section12" class="container-fluid">
-  <h1><%= t ".drink" %></h1>
-  <ul class="breadcrumb">
-    <li><%= link_to t(".all"),root_path %></li>
-  </ul>
+  <h1><%= link_to t(".drink"), products_path  %></h1>
+  <div class="col-lg-12">
+    <div id="DrinkCarousel" class="carousel slide" data-ride="carousel"
+      data-type="multi" data-interval="3000" id="FoodCarousel">
+      <div class="carousel-inner">
+        <% @products.each_with_index do |product, index| %>
+          <div class="item <%= index == 0 ? 'active' : ' ' %>">
+            <div class="col-md-2 col-sm-6 col-xs-12">
+              <%= link_to product_path(product) do %>
+                <%= default_image product %>
+                <h5><%= product.name %></h5>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+        <a class="left carousel-control" href="#DrinkCarousel" data-slide="prev">
+          <i class="glyphicon glyphicon-chevron-left"></i>
+        </a>
+        <a class="right carousel-control" href="#DrinkCarousel" data-slide="next">
+          <i class="glyphicon glyphicon-chevron-right"></i>
+        </a>
+    </div>
+  </div>
 </div>

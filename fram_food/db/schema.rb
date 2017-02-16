@@ -78,6 +78,7 @@ ActiveRecord::Schema.define(version: 20170210022121) do
     t.string   "description"
     t.string   "image"
     t.string   "classify"
+    t.string   "description"
     t.integer  "category_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def show
+    @products = Product.all
     if valid_page?
       render template: "pages/#{params[:page]}"
     else

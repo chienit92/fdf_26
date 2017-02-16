@@ -20,6 +20,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  add_cart: "Add to Cart"
   comment: "Comment"
   food: "Food"
   drink: "Drink"

@@ -6,11 +6,10 @@ class ProductsController < ApplicationController
     @order_detail = current_order.order_details.new
     @products = Product.all
   end
-  
+
   def show
     @order_detail = current_order.order_details.new
   end
-
 
   private
   def product_params
