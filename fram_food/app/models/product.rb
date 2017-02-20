@@ -15,4 +15,7 @@ class Product < ApplicationRecord
   validates :classify, presence: true
 
   enum classify_types: [:Food, :Drink]
+
+  scope :order_by_time, -> {order created_at: :desc}
+  scope :order_by_name, -> {order name: :desc}
 end

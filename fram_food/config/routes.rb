@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments, only: :create
   end
-
+  resources :rates, only: [:create]
   namespace :admins do
     get "/admin_pages/*page", to: "admin_pages#show"
     resources :categories, except: [:new, :show]

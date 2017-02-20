@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 20170210022121) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.integer  "value"
+    t.integer  "vote"
     t.integer  "product_id"
     t.integer  "user_id"
     t.datetime "created_at", null: false

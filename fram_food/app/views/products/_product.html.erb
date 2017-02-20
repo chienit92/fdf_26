@@ -1,0 +1,11 @@
+<div>
+   <li id="product-<%= product.id %>">
+     <span class="image-show"><%= link_to default_image product %></span><br>
+     <span class="name"><%= t "product.name" %><%= product.name %></span><br>
+     <span class="price"><%= t "product.price" %><%= product.price %></span><br>
+     <span class="rate">
+       <%= t "product.rating" %><%= product.ratings.average :vote %>
+     </span><br>
+   </li>
+   <div class="clearfix"></div>
+ </div>
