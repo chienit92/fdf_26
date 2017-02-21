@@ -35,6 +35,34 @@ en:
   error: "error"
   please_log_in: "Please login"
   user_not_admin: "User not admin"
+  filter:
+    by_name_a_to_z: "Name [A-Z]"
+    by_name_z_to_a: "Name [Z-A]"
+    by_price_high: "Price (High to Low)"
+    by_price_low: "Price (Low to High)"
+    by_time_newest: "Newest first"
+    by_time_lodest: "Oldest first"
+    by_rate_low: "Rate (Low to High)"
+    by_rate_high: "Rate (High to Low)"
+    blank: "Blank"
+    ordered: "Ordered"
+    title: "Sort by "
+    index: "Please Select"
+    name: "name"
+    price: "price"
+    created_at: "created_at"
+    asc: "asc"
+    desc: "desc"
+
+  rates:
+    one_star: "One star"
+    two_star: "Two star"
+    three_star: "Three star"
+    four_star: "Four star"
+    five_star: "Five star"
+    success: "Rate success"
+    fail: "You has voted, can't vote agian"
+    error: "Rate error"
 
   layouts:
     admin_header:
@@ -99,7 +127,6 @@ en:
       new_user: "New user ?"
       forgot: "Forgot ?"
       forgot_password: "Forgot password !"
-
   users:
     new:
       signup: "Sign up"

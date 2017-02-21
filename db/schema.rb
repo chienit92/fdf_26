@@ -86,11 +86,11 @@ ActiveRecord::Schema.define(version: 20170210022121) do
   end
 
   create_table "ratings", force: :cascade do |t|
-    t.integer  "value"
+    t.integer  "vote",       default: 0
     t.integer  "product_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.index ["product_id"], name: "index_ratings_on_product_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end

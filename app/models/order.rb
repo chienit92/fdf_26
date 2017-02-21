@@ -9,13 +9,13 @@ class Order < ApplicationRecord
 
   enum status: [:inprogress, :rejected, :approved]
   def subtotal
-    order_details.collect {|od| od.valid? ? (od.unit_quantity * od.unit_price) : Settings.zero}.sum
+    order_details.collect {|od| od.valid? ? (od.unit_quantity * od.unit_price) : 0}.sum
   end
 
   private
   def init_order
-    self.status = Settings.zero
-    self.total_pay = Settings.zero
+    self.status = 0
+    self.total_pay = 0
   end
 
   def update_subtotal

@@ -1,28 +1,26 @@
 class ProductsController < ApplicationController
-  before_action :logged_in_user, only: [:show, :index]
-  before_action :find_product, only: :show
+  before_action :logged_in_user, :normal_user?, only: [:show, :index]
 
   def index
     @order_detail = current_order.order_details.new
-    @products = Product.all
+    @products = if params[:order] && params[:direction]
+      order_prod Product
+    elsif params[:direction]
+      order_prod_rate Product
+    else
+      order_prod_default Product
+    end
   end
-  
+
   def show
     @order_detail = current_order.order_details.new
-  end
-
-
-  private
-  def product_params
-    params.require(:product).permit :name, :price, :available, :image,
-      :classify, :category_id
-  end
-
-  def find_product
-    @product = Product.find_by id: params[:id]
+    @category = Category.all
+    @product = Product.find_by_id params[:id]
+    @rating = Rating.new
+    @votes = Rating.votes
     unless @product
-      flash[:danger] = t "controllers.products.not_exist"
-      redirect_to root_path
+       flash[:danger] = t "flash.prod_nil"
+       redirect_to products_path
     end
   end
 end

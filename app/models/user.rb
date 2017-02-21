@@ -48,6 +48,11 @@ class User < ApplicationRecord
     self == user
   end
 
+  def has_voting product
+    products = self.ratings.collect {|r| r.product}
+    products.include? product
+  end
+
   private
   def downcase_email
     email.downcase!

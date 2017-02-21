@@ -12,4 +12,3 @@ User.create! name:  "Example User",
   is_admin: true,
   phone: "01675899424",
   address: "Neifheilm"
-
