@@ -13,9 +13,11 @@ class ProductsController < ApplicationController
   end
 
   def show
+
     @order_detail = current_order.order_details.new
     @category = Category.all
     @product = Product.find_by_id params[:id]
+    @comments = @product.comments.order_by_time
     @rating = Rating.new
     @votes = Rating.votes
     unless @product

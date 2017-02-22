@@ -24,4 +24,11 @@
   </ul>
   <div class="clearfix"></div>
 </div>
+<div class="comment">
+    <span class="leave"><%= t "views.books.shows.leave" %></span>
+    <% if logged_in? %>
+      <%= render "comments/comment_form", current_user: current_user %>
+    <% end %>
+    <%= render "comments/comment_list" %>
+</div>
 <div class="clearfix"></div>
