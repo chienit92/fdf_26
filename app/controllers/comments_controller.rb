@@ -1,9 +1,10 @@
 class CommentsController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in_user, :normal_user?
   before_action :find_product
 
   def create
     @comment = @product.comments.build comments_params
+    @comments = @product.comments.order_by_time
     if @comment.save
       respond_to do |format|
         format.js
@@ -15,7 +16,11 @@ class CommentsController < ApplicationController
 
   def destroy
     @comments.destroy
-    redirect_to request.referrer || root_url
+    @comments = @product.comments.order_by_time
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js
+    end
   end
 
   private

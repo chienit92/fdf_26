@@ -1,9 +1,0 @@
-<div class="form-comment">
-  <%= form_for :comment, url: product_comments_path(@product.id),
-    html: {multipart: true}, remote: true do |f| %>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.text_area :content %>
-    <div class="clearfix"></div>
-    <%= f.submit t("comment"), class: "btn btn-primary" %>
-  <% end %>
-</div>
