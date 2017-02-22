@@ -1,6 +1,22 @@
 <% provide :title, @product.name %>
-<div class="col-md-8">
-  <ul class="products", id="current-product">
-    <%= render @product %>
+<div class="col-md-8 td-product-show">
+  <ul class="products" id="current-product">
+    <%= render "product_show", product: @product %>
   </ul>
 </div>
+<div class="col-md-4">
+  <%= link_to "", session[:return_to], class: "icon" %>
+  <ul class="td-product-comment" id="comments_<%= @product.id %>">
+    <span class="name"><%= t "product.name" %><%= @product.name %></span><br>
+    <span class="description"><%= t "product.description" %><%= @product.description %></span><br>
+    <span class="price"><%= t "product.price" %><%= @product.price %></span><br>
+    <div class="comments">
+      <%= render "shared/comment_on_prod", product: @product%>
+    </div>
+    <% if logged_in? %>
+      <%= render "shared/comment_form", product: @product %>
+    <% end %>
+  </ul>
+  <div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>

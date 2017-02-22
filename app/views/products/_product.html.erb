@@ -2,7 +2,13 @@
   <li id="product-<%= product.id %>">
     <span class="image-show"><%= link_to default_image product %></span><br>
     <span class="name"><%= t "product.name" %><%= product.name %></span><br>
-    <span class="description"><%= t "product.description" %><%= product.description %></span><br>
+    <span class="description">
+      <%= t "product.description" %>
+      <%= product.description %>
+    </span><br>
+    <span class="rate">
+      <%= t "product.rate" %><%= product.ratings.average :vote %>
+    </span><br>
     <span class="price"><%= t "product.price" %><%= product.price %></span><br>
     <%= form_for @order_detail do |f| %>
       <div class="input-group">
