@@ -21,6 +21,7 @@
 
 en:
   comment: "Comment"
+  product: "Product"
   food: "Food"
   drink: "Drink"
   hot: "Hot"
@@ -35,6 +36,9 @@ en:
   error: "error"
   please_log_in: "Please login"
   user_not_admin: "User not admin"
+  order:
+    button: "Add to Cart"
+
   filter:
     by_name_a_to_z: "Name [A-Z]"
     by_name_z_to_a: "Name [Z-A]"
