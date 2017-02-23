@@ -17,4 +17,17 @@ class ApplicationController < ActionController::Base
       redirect_to root_path
     end
   end
+
+  def normal_user?
+    if current_user
+      if current_user.is_admin?
+        flash[:danger] = t "flash.is_admin"
+        redirect_to root_path
+      end
+    end
+  end
+
+  def check_column order
+    Product.column_names.include?(order) ? order : "created_at"
+  end
 end

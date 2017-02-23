@@ -1,9 +1,12 @@
 <% provide :title, t("home_title") %>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-  <%= render "layouts/header" %>
-  <%= render "layouts/carousel" %>
-  <%= render "layouts/food" %>
-  <%= render "layouts/drink" %>
-  <%= render "layouts/hot" %>
-  <%= render "layouts/new" %>
+  <div><%= render "layouts/header" %></div>
+  <div id="section1">
+    <div class="col-sm-3">
+      <%= render "layouts/leftmenu" %>
+    </div>
+    <div class="col-sm-9">
+    <%= render "layouts/banner" %>
+    </div>
+  </div>
 </body>

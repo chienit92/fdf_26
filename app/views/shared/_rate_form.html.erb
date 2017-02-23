@@ -1,0 +1,12 @@
+
+<div id="rate-<%= value %>" class="td-rate">
+  <%= form_for @rate do |f| %>
+    <%= f.hidden_field :vote, value: key %>
+    <%= f.hidden_field :product_id, value: @product.id %>
+    <%= f.hidden_field :user_id, value:  current_user.id %>
+    <b class="glyphicon glyphicon-star star">
+      <%= f.submit "", class: "rate-button" %>
+    </b>
+  <% end %>
+</div>
+

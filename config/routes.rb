@@ -12,7 +12,10 @@ Rails.application.routes.draw do
   resources :products, only: [:show, :index] do
      resources :comments, only: [:create, :destroy]
    end
+  resources :comments
   resources :orders, only: [:show, :update]
+  resources :categories, only: [:show, :index]
+  resources :ratings, only: [:create]
   namespace :admins do
     get "/admin_pages/*page", to: "admin_pages#show"
     resources :categories, except: [:new, :show]

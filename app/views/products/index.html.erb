@@ -1,15 +1,10 @@
-<% provide :title, t(".product") %>
-<h2><%= t "product" %></h2>
-<div class="container">
-  <div class="card">
-    <div class="col-lg-9">
-      <% @products.each do |product| %>
-        <div class="col-md-3">
-          <%= default_image product %>
-          <h5><%= link_to product.name, product_path(product) %> </h5>
-          <%= product.price %>
-        </div>
-      <% end %>
-    </div>
-  </div>
+<% provide :title, t("productindex") %>
+<div class="">
+  <%= will_paginate %>
+  <ul class="products col-md-offset-1 td-index-prod", id="current-product">
+    <%= render @products %>
+    <div class="clearfix"></div>
+  </ul>
+  <%= will_paginate %>
 </div>
+<div class="clearfix"></div>
